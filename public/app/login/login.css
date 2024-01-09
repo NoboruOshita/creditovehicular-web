@@ -1,0 +1,179 @@
+body {
+	background: #E5E5E5;
+	margin: 0;
+	padding: 0;
+	font-family: 'Comic Neue', sans-serif;
+}
+.e3_7 { 
+	overflow:hidden;
+}
+.e3_7 { 
+	width: 97%;
+	height: 93.9%;
+	position:absolute;
+	background-image:url(../../assets/img/desktop___1.png);
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+.e3_7 {
+	max-width: 100%;
+	max-height: 100%;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	background-color: white;
+	border-radius: 10px;
+}
+.e3_10 { 
+	border:15px solid rgba(255, 255, 255, 1);
+}
+.e3_10 { 
+	width: 32%;
+	height: 50%;
+	position:absolute;
+	left: 45rem;
+	top: 2rem;
+	border-radius: 30px;
+}
+.e3_18 { 
+	border:15px solid rgba(255, 255, 255, 1);
+}
+.e3_18 { 
+	width:436px;
+	height:130px;
+	position:absolute;
+	left:45rem;
+	top:25rem;
+	border-radius: 30px;
+}
+.e3_12 { 
+	color:rgba(255, 255, 255, 1);
+	position:absolute;
+	left:50rem;
+	top: 4rem;
+	font-family:Comic Neue;
+	text-align:left;
+	font-size:32px;
+	letter-spacing:0;
+}
+.e3_14 { 
+	color:rgba(255, 255, 255, 1);
+	width:205px;
+	height:40px;
+	position:absolute;
+	left:50rem;;
+	top: 11rem;
+	font-family:Comic Neue;
+	text-align:left;
+	font-size:32px;
+	letter-spacing:0;
+}
+.e3_11 { 
+	color:rgba(255, 255, 255, 1);
+	position:absolute;
+	left:2.7rem;
+	top: 8rem;
+	width: 45%;
+	font-family:Comic Neue;
+	font-size:90px;
+	letter-spacing:0;
+}
+.e3_13 { 
+	background-color:rgba(217.0000022649765, 217.0000022649765, 217.0000022649765, 1);
+	font-size: 20px;
+	width:366px;
+	height:42px;
+	position:absolute;
+	left: 47.8rem;
+	top: 6.8rem;
+	border: none;
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
+	border-bottom-left-radius:10px;
+	border-bottom-right-radius:10px;
+}
+.e3_15 { 
+	background-color:rgba(217.0000022649765, 217.0000022649765, 217.0000022649765, 1);
+	font-size: 20px;
+	width:365px;
+	height:41px;
+	position:absolute;
+	left:47.8rem;
+	top: 14rem;
+	border: none;
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
+	border-bottom-left-radius:10px;
+	border-bottom-right-radius:10px;
+}
+.e3_21 { 
+	width: 11.9%;
+	height: 25.5%;
+	position:absolute;
+	left:18rem;
+	top:23rem;
+	background-image:url(../../assets/img/r_1.png);
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+.e3_16 { 
+	background-color:rgba(217.0000022649765, 217.0000022649765, 217.0000022649765, 1);
+	font-size: 20px;
+	width:150px;
+	height:42px;
+	position:absolute;
+	left: 55rem;
+	top: 19rem;
+	border-top-left-radius:30px;
+	border-top-right-radius:30px;
+	border-bottom-left-radius:30px;
+	border-bottom-right-radius:30px;
+	cursor: pointer;
+}
+.e3_19 { 
+	background-color:rgba(217.0000022649765, 217.0000022649765, 217.0000022649765, 1);
+	font-size: 20px;
+	width:236px;
+	height:42px;
+	position:absolute;
+	left:53rem;
+	top:29rem;
+	border-top-left-radius:30px;
+	border-top-right-radius:30px;
+	border-bottom-left-radius:30px;
+	border-bottom-right-radius:30px;
+	cursor: pointer;
+}
+
+.e3_12,
+.e3_14,
+.e3_11,
+.e3_17,
+.e3_20 {
+	display: block;
+	margin-bottom: 10px;
+}
+
+.e3_7 { 
+	overflow: hidden;
+}
+
+/* Estilos específicos para pantallas de ordenador */
+@media (min-width: 1024px) {
+	.e3_7 { 
+		position: absolute;
+		background-image: url(../../assets/img/desktop___1.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	.e3_12 { 
+		color: rgba(255, 255, 255, 1);
+		position: absolute;
+		left: 50rem;
+		top: 4rem;
+		font-family: Comic Neue;
+		text-align: left;
+		font-size: 32px;
+		letter-spacing: 0;
+	}
+}

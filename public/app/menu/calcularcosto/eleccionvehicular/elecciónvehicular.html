@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Comic+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../assets/normalize.css" />
+    <link href="elecciónvehicular.css" rel="stylesheet" />
+    <title>Credito Vehicular</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="header-container">
+        <span class="header-title">Elección del Vehiculo</span>
+        <div class="header-img-user"></div>
+      </div>
+      <div class="body-container">
+        <div class="right-container">
+          <div>
+            <button type="button" id="calcularcosto" name="calcularcosto">
+              Calcular Costos
+            </button>
+          </div>
+          <div>
+            <button type="button" id="resumen" name="resumen">Resumen</button>
+          </div>
+          <div>
+            <button type="button" id="historial" name="historial">
+              Historial
+            </button>
+          </div>
+          <div>
+            <button type="button" id="logout" name="logout">
+              Cerrar sesión
+            </button>
+          </div>
+        </div>
+
+        <div class="left-container">
+          <div>
+            <span class="v42_41">Marca</span>
+            <select name="brand" id="brand" class="v49_3">
+              <option value="seleccionB">--Seleccionar--</option>
+              <option value="Toyota">Toyota</option>
+              <option value="Nissan">Nissan</option>
+              <option value="Kia">Kia</option>
+              <option value="BMW">BMW</option>
+              <option value="Audi">Audi</option>
+              <option value="Chevrolet">Chevrolet</option>
+            </select>
+          </div>
+          <div>
+            <span class="v49_2">Modelo</span>
+            <select name="model" id="model" class="v49_4" disabled>
+              <option value="seleccionM">--Seleccionar--</option>
+              <!-- Toyota -->
+              <option value="Corolla" data-brand="Toyota">Corolla</option>
+              <option value="Yaris" data-brand="Toyota">Yaris</option>
+              <!-- Nissan -->
+              <option value="Versa" data-brand="Nissan">Versa</option>
+              <option value="Sentra" data-brand="Nissan">Sentra</option>
+              <!-- Kia -->
+              <option value="CeedGT" data-brand="Kia">Ceed GT</option>
+              <option value="Optima" data-brand="Kia">Optima</option>
+              <!-- BMW -->
+              <option value="M3" data-brand="BMW">M3</option>
+              <option value="M8GranCoupe" data-brand="BMW">
+                M8 Gran Coupe
+              </option>
+              <!-- Audi -->
+              <option value="RS7Sportback" data-brand="Audi">
+                RS7 Sportback
+              </option>
+              <option value="A4Avant" data-brand="Audi">A4 Avant</option>
+              <!-- Chevrolet -->
+              <option value="Camaro" data-brand="Chevrolet">Camaro</option>
+              <option value="PrismaLTZ" data-brand="Chevrolet">
+                Prisma LTZ
+              </option>
+            </select>
+          </div>
+          <div>
+            <span class="v61_2">Precio Min</span>
+            <input
+              type="text"
+              name="price_min"
+              id="price_min"
+              class="v61_3"
+              placeholder="$0.00"
+              disabled/>
+          </div>
+
+          <div>
+            <span class="v61_4">Precio Max</span>
+            <input
+              type="text"
+              name="price_max"
+              id="price_max"
+              class="v61_5"
+              placeholder="$0.00"
+              disabled/>
+          </div>
+          <div>
+            <button class="v61_6" id="cambiarPrecio">Precio en Soles</button>
+          </div>
+          <img
+            src="../../../../assets/img/Img_Vehicular/default-image.png"
+            id="img"
+            alt="img_auto"
+            class="v49_6"
+          />
+          <p class="title-description">Descripción:</p>
+          <p class="description" id="description" name="description">
+            Descripcion del Vehiculo
+          </p>
+          <button type="submit" class="btn-submit" id="submit">
+            Seleccionar
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    //---RUTAS---//
+    document.getElementById("calcularcosto").addEventListener("click", () => {
+      window.location.href = "../../calcularcosto/calcularcosto.html";
+    });
+    document.getElementById("resumen").addEventListener("click", () => {
+      window.location.href = "../../resumen/resumen.html";
+    });
+    document.getElementById("historial").addEventListener("click", () => {
+      window.location.href = "../../historial/historial.html";
+    });
+  </script>
+  <script type="module" src="elecciónvehicular.js"></script>
+</html>

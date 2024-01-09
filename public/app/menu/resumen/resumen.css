@@ -1,0 +1,262 @@
+@import url("../../../assets/app.css");
+* {
+  box-sizing: border-box;
+  color: black;
+  font-family: var(--fuente-secundaria);
+}
+body {
+  font-size: 18px;
+  overflow: scroll;
+}
+
+.content {
+  width: 100%;
+  background: url("../../../assets/img/desktop___1.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding: 20px;
+}
+.title-content {
+  width: 100%;
+  background: rgba(255, 255, 255, 1);
+  opacity: 1;
+  border:var(--border-general-style);
+  border-radius: 40px;
+  overflow: hidden;
+
+  display: flex;
+  padding-left: 20px;
+  margin-bottom: 1rem;
+  justify-content: space-between; /* Distribuye los elementos a los extremos del contenedor */
+  align-items: center; /* Centra verticalmente los elementos */
+}
+
+.title {
+  width: 516px;
+  color: rgba(0, 0, 0, 1);
+  font-size: 48px;
+  opacity: 1;
+  text-align: left;
+}
+.img-title {
+  width: 77px;
+  height: 81px;
+  background: url("../../../assets/img/v13_15.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  margin-right: 40px;
+}
+
+.menu-table-content {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  overflow: hidden;
+  display: flex;
+}
+
+/*Left part*/
+
+.left-content {
+  width: 25%;
+  height: 659px;
+  background: rgba(255, 255, 255, 1);
+  opacity: 1;
+  border: var(--border-general-style);
+  border-bottom-left-radius: 30px;
+  border-top-left-radius: 30px;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center; /* Centra horizontalmente el contenido */
+}
+.menu-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra los elementos horizontalmente */
+  position: relative;
+  top: 1rem;
+  width: 100%;
+}
+
+.menu-option {
+  margin-bottom: 10px; /* Agrega un espaciado vertical entre los elementos */
+  text-align: center; /* Centra el texto horizontalmente dentro de cada elemento */
+  border: 2px black solid;
+  border-radius: 30px;
+  width: 90%;
+  display: flex;
+  align-items: center; /* Centra verticalmente el contenido */
+  justify-content: center; /* Centra horizontalmente el contenido */
+  &:hover {
+    cursor: pointer;    
+    color: var(--btn-color-blanco);
+    background-color: var(--color-celestecielo);
+    border-color: var(--color-celestecielo);
+  }
+}
+
+.menu-option .option {
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: 0em;
+}
+.menu-option .option a {
+  text-decoration: none;
+}
+
+.right-content {
+  width: 75%;
+  height: 659px;
+  background: rgba(255, 255, 255, 1);
+  opacity: 1;
+  border: solid rgba(0, 0, 0, 1);
+  border-width: 4px 4px 4px 0;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  overflow: hidden;
+}
+
+/*Right part*/
+
+.title-right-content {
+  display: flex;
+  padding-left: 20px;
+  padding-top: 20px;
+  align-items: center; /* Centra verticalmente los elementos */
+}
+
+.title-right {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 37px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+/*==============tabla resumen financiero=======*/
+
+.table_content {
+  width: 100%;
+  opacity: 1;
+  padding: 20px 40px;
+  margin-top: 20px;
+  overflow-y: scroll;
+  max-height: 500px;
+}
+
+table,
+th,
+td {
+  border: 2px solid;
+}
+.table-resumen th {
+  position: sticky;
+  background-color: cornflowerblue;
+  z-index: 1; /* Asegura que el encabezado esté encima del contenido de la tabla */
+}
+
+.table-resumen {
+  width: 100%;
+  /*max-width: 400px;*/
+  min-width: 600px;
+  table-layout: auto; /* Esto permite que el ancho de la tabla se ajuste automáticamente al contenido */
+  border-collapse: collapse; /* Combina los bordes de las celdas */
+}
+
+.table-resumen th,
+.table-resumen td {
+  padding: 5px 10px;
+  text-align: center;
+}
+
+.table-resumen .tre-n {
+  width: 10%;
+}
+.table-resumen .tre-saldoi {
+  width: 20%;
+}
+.table-resumen .tre-inte {
+  width: 15%;
+}
+.table-resumen .tre-amort {
+  width: 20%;
+}
+.table-resumen .tre-cuota {
+  width: 15%;
+}
+.table-resumen .tre-saldof {
+  width: 20%;
+}
+
+/*====estilos menu desplegable=====*/
+.menu-toggle {
+  display: none;
+}
+.left-togle-menu-content {
+  display: block !important;
+  height: 300px;
+  width: 80%;
+  margin: auto;
+  justify-content: center;
+}
+.togle-menu-table-content {
+  display: block !important ;
+  text-align: center;
+}
+#menu-button {
+  display: block;
+  background-color: #333;
+  color: #fff;
+  font-size: 24px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.box{
+  display: flex;
+  position: relative;
+  padding-left: 16rem;
+  bottom: 3rem;
+  justify-content: space-evenly;
+  align-items: center;
+}
+/*============Media querys==========*/
+
+@media (max-width: 970px) {
+  .left-content {
+    display: none;
+  }
+
+  .right-content {
+    width: 100%; /* Hacer que "right-content" ocupe todo el ancho */
+  }
+  .menu-toggle {
+    display: block;
+  }
+}
+@media (min-width: 971px) {
+  /* Estilos para dispositivos de pantalla grande */
+  .left-content {
+    display: flex;
+  }
+  .left-content {
+    width: 20%;
+  }
+  .right-content {
+    width: 80%; /* Hacer que "right-content" ocupe todo el ancho */
+  }
+  .menu-toggle {
+    display: none;
+  }
+}

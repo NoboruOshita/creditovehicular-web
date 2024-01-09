@@ -1,0 +1,9 @@
+/* VARIABLES GENERAL */
+:root{
+    --btn-color-blanco: white;
+    --btn-color-amarillo: rgb(255, 251, 19);
+    --fuente-letra: Arial, Helvetica, sans-serif;
+    --fuente-secundaria: Comic Neue;
+    --color-celestecielo: rgb(106, 247, 252);
+    --border-general-style: 4px solid rgba(0, 0, 0, 1);
+}

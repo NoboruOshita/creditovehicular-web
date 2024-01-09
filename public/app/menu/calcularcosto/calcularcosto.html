@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Comic+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../../../assets/normalize.css" />
+    <link href="./calcularcosto.css" rel="stylesheet" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="content">
+      <div class="title-content">
+        <div class="menu-toggle">
+          <button id="menu-button">☰</button>
+        </div>
+        <span class="title">CALCULAR COSTOS</span>
+        <div class="img-title"></div>
+      </div>
+      <div id="id-menu-table-content" class="menu-table-content">
+        <div id="id-left-content" class="left-content">
+          <div class="menu-content">
+            <div class="menu-option">
+              <span class="option"
+                ><a
+                  href="../calcularcosto/calcularcosto.html"
+                  style="color: black"
+                  >Calcular Costos</a
+                >
+              </span>
+            </div>
+            <div class="menu-option">
+              <span class="option"
+                ><a href="../resumen/resumen.html" style="color: black"
+                  >Resumen</a
+                >
+              </span>
+            </div>
+            <div class="menu-option">
+              <span class="option"
+                ><a href="../historial/historial.html" style="color: black"
+                  >Historial</a
+                >
+              </span>
+            </div>
+            <div class="menu-option">
+              <span class="option" id="logout"><a href="" style="color: black">Cerrar Sesión</a>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="right-content">
+          <div class="title-right-content">
+            <span class="title-right">DATOS PERSONALES</span>
+          </div>
+          <label style="margin-left: 1.3rem;">Campos obligatorios (*)</label>
+          <div style="margin: 2%">
+            <form>
+              <div class="mb-3 row">
+                <label for="input1" class="form-label col-sm-2">DNI (*)</label>
+                <div class="col-sm-4">
+                  <!-- Tamaño pequeño para input -->
+                  <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    id="dni"
+                    placeholder="Ingrese dato"
+                    maxlength="8" required
+                  />
+                </div>
+                <label for="input2" class="form-label col-sm-2"
+                  >Fecha de nacimiento</label
+                >
+                <div class="col-sm-4">
+                  <!-- Tamaño pequeño para input -->
+                  <input
+                    type="date"
+                    id="fechadenacimiento"
+                    class="form-control form-control-sm"
+                    placeholder="Ingrese dato"
+                    disabled
+                  />
+                </div>
+              </div>
+              <div class="mb-3 row">
+                <label for="input3" class="form-label col-sm-2"
+                  >Nombre Completo</label
+                >
+                <div class="col-sm-4">
+                  <!-- Tamaño pequeño para input -->
+                  <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    id="nombrecompleto"
+                    placeholder="Ingrese dato"
+                    disabled
+                  />
+                </div>
+                <label for="input4" class="form-label col-sm-2"
+                  >Estado civil (*)</label
+                >
+                <div class="col-sm-4">
+                  <!-- Tamaño pequeño para input -->
+                  <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    id="estadocivil"
+                    placeholder="Ingrese dato"
+                  />
+                </div>
+              </div>
+            </form>
+            <h1 class="title-right" style="font-size: 25px">Financiamiento</h1>
+
+            <form>
+              <div class="mb-3 row">
+                <a
+                  href="./eleccionvehicular/elecciónvehicular.html"
+                  style="color: black"
+                  >Elegir Vehiculo</a
+                >
+                <label for="vehiculo" class="col-form-label col-sm-2"
+                  >Vehículo (*)</label
+                >
+                <div class="col-sm-4">
+                  <!-- Tamaño pequeño para input -->
+                  <input
+                    type="text"
+                    id="vehiculo"
+                    name="vehiculo"
+                    class="form-control form-control-sm"
+                    placeholder="Seleccione un vehiculo"
+                    disabled
+                  />
+                </div>
+                <label for="input1" class="form-label col-sm-2"
+                  >Costo vehículo (*)</label
+                >
+                <div class="col-sm-4">
+                  <!-- Tamaño pequeño para input -->
+                  <select
+                    class="form-select form-select-sm"
+                    name="costovehiculo"
+                    id="costovehiculo"
+                    placeholder="Seleccione un vehiculo"
+                  ></select>
+                </div>
+              </div>
+              <div class="mb-3 row">
+                <label for="input2" class="form-label col-sm-2"
+                  >Cuota inicial</label
+                >
+                <div class="col-sm-4">
+                  <!-- Tamaño pequeño para input -->
+                  <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    id="cuotainicial"
+                    placeholder="Ingrese dato"
+                    disabled
+                  />
+                </div>
+                <label for="input3" class="form-label col-sm-2"
+                  >% de cuota inicial (*)</label
+                >
+                <div class="col-sm-4">
+                  <!-- Tamaño pequeño para input -->
+                  <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    id="porcentajecuotainicial"
+                    placeholder="Ingrese dato"
+                  />
+                </div>
+              </div>
+              <div class="mb-3 row">
+                <label for="prestamo" class="form-label col-sm-2"
+                  >Importe de prestamo</label
+                >
+                <div class="col-sm-4">
+                  <!-- Tamaño pequeño para input -->
+                  <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    id="prestamo"
+                    placeholder="Ingrese dato"
+                    disabled
+                  />
+                </div>
+                <label for="fechaprestamo" class="form-label col-sm-2"
+                  >Fecha préstamo (*)</label
+                >
+                <div class="col-sm-4">
+                  <!-- Tamaño pequeño para input -->
+                  <input
+                    type="date"
+                    id="fechaprestamo"
+                    class="form-control form-control-sm"
+                    placeholder="Ingrese dato"
+                  />
+                </div>
+              </div>
+              <div class="mb-3 row">
+                <label for="plazomensual" class="form-label col-sm-2">Plazo en meses (*)</label>
+                <div class="col-sm-4">
+                  <!-- Tamaño pequeño para input -->
+                  <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    id="plazomensual"
+                    placeholder="Ingrese dato"
+                  />
+                </div>
+                <label for="plazoanual" class="form-label col-sm-2">Plazo en año</label>
+                <div class="col-sm-4">
+                  <!-- Tamaño pequeño para input -->
+                  <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    id="plazoanual"
+                    placeholder="Ingrese dato"
+                  />
+                </div>
+              </div>
+              <div class="mb-3 row">
+                <label for="TNM" class="form-label col-sm-2">% TNM</label>
+                <div class="col-sm-4">
+                  <!-- Tamaño pequeño para input -->
+                  <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    id="TNM"
+                    placeholder="Ingrese dato (rango de 10 hasta 15)"
+                  />
+                </div>
+                <label for="TNA" class="form-label col-sm-2">% TNA</label>
+                <div class="col-sm-4">
+                  <!-- Tamaño pequeño para input -->
+                  <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    id="TNA"
+                    placeholder="Ingrese dato (rango de 10 hasta 15)"
+                  />
+                </div>
+              </div>
+              <div class="mb-3 row">
+                <label for="TEM" class="form-label col-sm-2">% TEM (*)</label>
+                <div class="col-sm-4">
+                  <!-- Tamaño pequeño para input -->
+                  <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    id="TEM"
+                    placeholder="Ingrese dato (rango de 10 hasta 15)"
+                  />
+                </div>
+                <label for="TEA" class="form-label col-sm-2">% TEA</label>
+                <div class="col-sm-4">
+                  <!-- Tamaño pequeño para input -->
+                  <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    id="TEA"
+                    placeholder="Ingrese dato (rango de 10 hasta 15)"
+                  />
+                </div>
+              </div>
+              <div class="mb-3 row">
+                <label for="segdesgravament" class="form-label col-sm-2"
+                  >% Seguro desgravamen</label
+                >
+                <div class="col-sm-4">
+                  <!-- Tamaño pequeño para input -->
+                  <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    id="segdesgravament"
+                    placeholder="Ingrese dato (rango de 5 hasta 15)"
+                  />
+                </div>
+                <label for="NumCuota" class="form-label col-sm-2"
+                  >N° cuotas</label
+                >
+                <div class="col-sm-4">
+                  <!-- Tamaño pequeño para input -->
+                  <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    id="NumCuota"
+                    placeholder="Ingrese dato"
+                    disabled
+                  />
+                </div>
+              </div>
+              <div class="mb-3 row">
+                <label for="segvehiculomensual" class="form-label col-sm-2"
+                  >Seguro riesgo</label
+                >
+                <div class="col-sm-4">
+                  <!-- Tamaño pequeño para input -->
+                  <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    id="segvehiculomensual"
+                    placeholder="Ingrese dato"
+                  />
+                </div>
+                <label for="Portes" class="form-label col-sm-2"
+                  >Portes</label
+                >
+                <div class="col-sm-4">
+                  <!-- Tamaño pequeño para input -->
+                  <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    id="Portes"
+                    placeholder="Ingrese dato"
+                  />
+                </div>
+              </div>
+
+              <div class="mb-3 row">
+                <label for="graciastotal" class="form-label col-sm-2"
+                  >Periodo de gracias total</label
+                >
+                <div class="col-sm-4">
+                  <!-- Tamaño pequeño para input -->
+                  <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    id="graciastotal"
+                    placeholder="Ingrese dato"
+                  />
+                </div>
+                <label for="graciasparcial" class="form-label col-sm-2"
+                  >Periodo de gracias parcial</label
+                >
+                <div class="col-sm-4">
+                  <!-- Tamaño pequeño para input -->
+                  <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    id="graciasparcial"
+                    placeholder="Ingrese dato"
+                  />
+                </div>
+              </div>
+              
+              <div class="btn-orden">
+                  <div class="col-sm-4">
+                    <!-- Tamaño pequeño para el botón -->
+                    <button type="submit" class="btn btn-primary" id="submit">Calcular</button>
+                  </div>
+                  <div class="col-sm-4">
+                    <!-- Tamaño pequeño para el botón -->
+                    <button type="reset" class="btn btn-primary">Resetear</button>
+                  </div>
+                  <div class="col-sm-4">
+                    <!-- Tamaño pequeño para el botón -->
+                    <a href="../resumen/resumen.html" class="btn btn-primary" id="submitresumen">Ver Resumen</a>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="calcularcosto.js"></script>
+  </body>
+</html>

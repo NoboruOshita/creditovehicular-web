@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Comic+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./../../assets/normalize.css" />
+    <link href="./menu.css" rel="stylesheet" />
+    <title>Credito Vehicular</title>
+  </head>
+  <body>
+    <div class="v7_75">
+      <div class="v7_76">
+        <div class="v13_15"></div>
+      </div>
+      <div class="v13_3">
+        <div class="v7_108"></div>
+        <div class="v7_109"></div>
+        <div class="v19_115">
+          <button type="button" class="v19_117" id="resumen">Resumen</button>
+        </div>
+      </div>
+      <div class="v13_8">
+        <button type="button" class="v13_13" id="calcularcosto">
+          Calcular Costos
+        </button>
+      </div>
+      <div class="v13_7">
+        <button type="button" class="v13_6" id="logout">Cerrar sesión</button>
+      </div>
+      <div class="v19_66">
+        <button type="button" class="v19_68" id="tasasbancos">
+          Tasas bancos
+        </button>
+      </div>
+      <div class="v19_69">
+        <button type="button" class="v19_70" id="historial">Historial</button>
+      </div>
+      <span class="v13_4"><p></p> </span>
+      <div class="v13_16"></div>
+    </div>
+  </body>
+  <script>
+    document.getElementById("calcularcosto").addEventListener("click", () => {
+      window.location.href = "calcularcosto/calcularcosto.html";
+    });
+    document.getElementById("tasasbancos").addEventListener("click", () => {
+      window.location.href = "tasasbanco/tasasbanco.html";
+    });
+    document.getElementById("resumen").addEventListener("click", () => {
+      window.location.href = "resumen/resumen.html";
+    });
+    document.getElementById("historial").addEventListener("click", () => {
+      window.location.href = "historial/historial.html";
+    });
+  </script>
+  <script type="module" src="menu.js"></script>
+</html>

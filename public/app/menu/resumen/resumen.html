@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Comic+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../assets/normalize.css">
+    <link href="resumen.css" rel="stylesheet" />
+    <title>Credito Vehicular</title>
+  </head>
+  <body>
+    <div class="content">
+      <div class="title-content">
+        <div class="menu-toggle">
+          <button id="menu-button">☰</button>
+        </div>
+        <span class="title">Financiamiento Vehicular</span>
+        <div class="img-title"></div>
+      </div>
+      <div id="id-menu-table-content" class="menu-table-content">
+        <div id="id-left-content" class="left-content">
+          <div class="menu-content">
+            <div class="menu-option">
+              <span class="option"><a href="../calcularcosto/calcularcosto.html">Calcular Costos</a> </span>
+            </div>
+            <div class="menu-option">
+              <span class="option"><a href="../resumen/resumen.html">Resumen</a> </span>
+            </div>
+            <div class="menu-option">
+                <span class="option"><a href="../historial/historial.html">Historial</a></span>
+            </div>
+            <div class="menu-option">
+              <span class="option" id="logout"><a href="">Cerrar sesión</a> </span>
+            </div>
+          </div>
+        </div>
+        <div class="right-content">
+          <div class="title-right-content">
+            <span class="title-right">Resumen Financiamiento</span>
+          </div>
+          <div class="table_content">
+            <table class="table-resumen">
+              <tr>
+                <th class="tre-n">N°</th>
+                <th class="tre-fecha">FECHA</th>
+                <th class="tre-factor">FACTOR</th>
+                <th class="tre-saldoi">SALDO INICIAL</th>
+                <th class="tre-inte">INTERES</th>
+                <th class="tre-amort">AMORTIZACION</th>
+                <th class="tre-cuota">CUOTA</th>
+                <th class="tre-saldof">SALDO FINAL</th>
+                <th class="tre-segDes">SEGURO DESGRAVAMEN</th>
+                <th class="tre-segRiesgo">SEGURO RIESGO</th>
+                <th class="tre-portes">PORTES</th>
+                <th class="tre-flujo">FLUJO</th>
+                <th class="tre-flujoTEA">FLUJO TEM</th>
+                <th class="tre-valorActual">VALOR ACTUAL</th>
+              </tr>
+              <tr>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+          <div>
+              <label for="boxTIR">TCEP del Flujo (anual)</label>
+              <input type="text" name="boxTIR" id="boxTIR" disabled>
+          </div>
+          <div>
+            <label for="boxVAN">VAN Operación</label>
+            <input type="text" name="boxVAN" id="boxVAN" disabled>
+          </div>
+          <div class="col-sm-4">
+            <!-- Tamaño pequeño para el botón -->
+            <button type="submit" class="btn btn-primary" id="submit">Guardar</button>
+          </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuButton = document.getElementById("menu-button");
+        const leftContent = document.getElementById("id-left-content");
+        const menuTableContent = document.getElementById(
+          "id-menu-table-content"
+        );
+
+        menuButton.addEventListener("click", function () {
+          /*if (!leftContent.classList.contains("left-togle-menu-content")){
+                leftContent.classList.add("left-togle-menu-content");
+            }else{
+                leftContent.classList.remove("left-togle-menu-content");
+            }*/
+          menuTableContent.classList.toggle("togle-menu-table-content");
+          leftContent.classList.toggle("left-togle-menu-content");
+        });
+      });
+    </script>
+    <script type="module" src="resumen.js"></script>
+  </body>
+</html>

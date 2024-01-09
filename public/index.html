@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Comic+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./app/login/login.css">
+    <link rel="stylesheet" href="./assets/normalize.css">
+    <title>Credito Vehicular</title>
+  </head>
+  <body>
+    <div class="e3_7">
+      <div class="e3_10"></div>
+      <div class="e3_18"></div>
+      <span class="e3_12">Correo Electronico</span>
+      <span class="e3_14">Contraseña</span>
+      <span class="e3_11">Financiamiento Vehicular</span>
+      <input type="email" placeholder="Corre Electronico" name="email" id="email" class="e3_13">
+      <input type="password" placeholder="contraseña" name="password" id="password" class="e3_15">
+      <div class="e3_21"></div>
+      <button type="submit" class="e3_16" id="login" name="login" value="Login">Ingresar</button>
+      <button type="button" class="e3_19" id="registrer" name="registrer">Registrar</button>
+    </div>
+  <script>
+    //Para redirigir a otra pagina
+    document.getElementById("registrer").addEventListener("click",function () {
+          window.location.href="./app/login/registro/registro.html";
+    });
+  </script>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js";
+    import { getDatabase, ref, set, child, update, remove, push } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-database.js";
+    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword  } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-auth.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-analytics.js";
+
+    const firebaseConfig = { 
+    apiKey: "AIzaSyDm1H0XFl2gXIoM9vSeHfxz8sTx2baaFFQ",
+    authDomain: "creditovehicularapp.firebaseapp.com",
+    databaseURL: "https://creditovehicularapp-default-rtdb.firebaseio.com",
+    projectId: "creditovehicularapp",
+    storageBucket: "creditovehicularapp.appspot.com",
+    messagingSenderId: "697634516145",
+    appId: "1:697634516145:web:1453e1dc7fa3a37b9ac690",
+    measurementId: "G-XP533G7VP2"
+  };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
+    const auth = getAuth()
+    const analytics = getAnalytics(app);
+
+    // Obtener el la dirección del campo //
+    var login = document.getElementById('login');
+
+    // Validación del Login //
+    login.addEventListener('click',(e)=>{
+      var email = document.getElementById('email').value;
+      var password = document.getElementById('password').value;
+
+
+      signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Signed in 
+        const user = userCredential.user;
+
+        const dt = Date();
+        update(ref(db, 'users/' + user.uid),{
+          last_login: dt
+        })
+        .then(()=>{
+          alert('Sesión Iniciada');
+          window.location.href = './app/menu/calcularcosto/calcularcosto.html'
+        })
+        .catch(()=>{
+          alert('Sesión Fallida');
+        })
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = 'Usuario no registrado';
+
+        alert(errorMessage);
+      });
+    });
+  </script>
+  </body>
+</html>
